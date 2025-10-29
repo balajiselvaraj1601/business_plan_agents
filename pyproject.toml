@@ -1,0 +1,71 @@
+[project]
+name = "business-plan-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "black>=25.9.0",
+    "coverage>=7.11.0",
+    "graphviz>=0.21",
+    "ipdb>=0.13.13",
+    "isort>=7.0.0",
+    "langchain>=1.0.2",
+    "langchain-core>=1.0.1",
+    "langchain-ollama>=1.0.0",
+    "langchain-tavily>=0.2.12",
+    "langgraph>=1.0.1",
+    "langgraph-checkpoint>=3.0.0",
+    "langsmith>=0.4.38",
+    "mypy>=1.18.2",
+    "pre-commit>=4.3.0",
+    "pydantic>=2.12.3",
+    "pydantic-core>=2.41.4",
+    "pydantic-extra-types>=2.10.6",
+    "pydantic-settings>=2.11.0",
+    "pyflakes>=3.4.0",
+    "pytest>=8.4.2",
+    "ruff>=0.14.2",
+    "tavily-python>=0.7.12",
+    "tox>=4.32.0",
+    "tox-uv>=1.29.0",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+namespace_packages = true
+explicit_package_bases = true
+disable_error_code = ["arg-type"]
+
+[dependency-groups]
+dev = [
+    "pytest-cov>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--strict-markers --strict-config"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+
+[tool.coverage.run]
+source = ["src"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/conftest.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]

@@ -1,0 +1,25 @@
+* Minimize the code in the """if __name__ == "__main__":""" section in each of the files in the src folder
+* Ensure that all imports are at the top of each file
+* Remove circular imports
+* Remove unused imports and duplicate variables
+* Keep all global variables (at the file level) just below the imports
+* Avoid hardcoded paths, secrets, or credentials in the codebase
+* Do not add __init__.py files. Remove need for __init__.py files
+* Avoid wildcard imports (e.g., from module import *)
+* Use clear, descriptive, and consistent naming conventions
+* Add type hints and meaningful docstrings for all functions, classes and modules
+* Keep function definitions small, focused, and single-purpose
+* Avoid deeply nested conditionals; refactor for readability
+* Avoid mutable default arguments in function definitions
+* Keep exception handling specific; avoid blanket except: clauses
+* Remove commented-out or dead code lines that are not required
+* Avoid hidden side effects and global state mutations
+* Use logging instead of print statements for diagnostics
+* Prefer composition over inheritance when designing classes
+
+* Use following Section divider schema
+# ============================================================================
+# Logging Configuration
+# ============================================================================
+
+* For each file the src folder, review the code and make appropriate changes to improve its functionality

@@ -1,0 +1,5 @@
+In the smart_planner file, do the following
+1. Increase logging 
+2. Log the topics and subtopics list in the planner node 
+3. following lines are getting logged for the router. do something similar for other nodes as well
+══════════════════════ ROUTER PLANNER ══════════════════════ 
